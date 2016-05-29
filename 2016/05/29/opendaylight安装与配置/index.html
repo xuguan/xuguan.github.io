@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>xuguan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="opendaylight安装与配置
+.wiz-todo, .wiz-todo-img {width: 16px; height: 16px; cursor: default; padding: 0 10px 0 2px; vertical-align: -10%;-webkit-user-select: none;} .wiz-todo-label { display: inline-blo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="xuguan">
+<meta property="og:url" content="http://xuguan.github.io/2016/05/29/opendaylight安装与配置/index.html">
+<meta property="og:site_name" content="xuguan">
+<meta property="og:description" content="opendaylight安装与配置
+.wiz-todo, .wiz-todo-img {width: 16px; height: 16px; cursor: default; padding: 0 10px 0 2px; vertical-align: -10%;-webkit-user-select: none;} .wiz-todo-label { display: inline-blo">
+<meta property="og:updated_time" content="2016-05-29T06:06:41.888Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="xuguan">
+<meta name="twitter:description" content="opendaylight安装与配置
+.wiz-todo, .wiz-todo-img {width: 16px; height: 16px; cursor: default; padding: 0 10px 0 2px; vertical-align: -10%;-webkit-user-select: none;} .wiz-todo-label { display: inline-blo">
+  
+    <link rel="alternate" href="/atom.xml" title="xuguan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">xuguan</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Coding style</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://xuguan.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-opendaylight安装与配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/29/opendaylight安装与配置/" class="article-date">
+  <time datetime="2016-05-29T06:06:41.870Z" itemprop="datePublished">2016-05-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE HTML><html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>opendaylight安装与配置</title>
+<style type="text/css" id="wiz_todo_style_id" wiz_link_version="01.00.09">.wiz-todo, .wiz-todo-img {width: 16px; height: 16px; cursor: default; padding: 0 10px 0 2px; vertical-align: -10%;-webkit-user-select: none;} .wiz-todo-label { display: inline-block; padding-top: 7px; padding-bottom: 6px; line-height: 1.5;} .wiz-todo-label-checked {  color: #666;} .wiz-todo-label-unchecked {text-decoration: initial;} .wiz-todo-completed-info {padding-left: 44px; display: inline-block; } .wiz-todo-avatar { width:20px; height: 20px; vertical-align: -20%; margin-right:10px; border-radius: 2px;} .wiz-todo-account, .wiz-todo-dt { color: #666; }</style><link type="text/css" rel="stylesheet" id="wiz_code_highlight_link" href="opendaylight安装与配置_files/wiz_code_highlight_2.css"><style id="wiz_custom_css">        html, body {            font-size: 15px;        }        body {            font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', SimSun, SimHei, arial, sans-serif;            line-height: 1.6;            padding: 0;            margin: 20px 36px;            margin: 1.33rem 2.4rem;        }        h1, h2, h3, h4, h5, h6 {            margin: 20px 0 10px;            margin: 1.33rem 0 0.667rem;            padding: 0;            font-weight: bold;        }        h1 {            font-size: 21px;            font-size: 1.4rem;        }        h2 {            font-size: 20px;            font-size: 1.33rem;        }        h3 {            font-size: 18px;            font-size: 1.2rem;        }        h4 {            font-size: 17px;            font-size: 1.13rem;        }        h5 {            font-size: 15px;            font-size: 1rem;        }        h6 {            font-size: 15px;            font-size: 1rem;            color: #777777;            margin: 1rem 0;        }        div, p, blockquote, ul, ol, dl, li, table, pre {            margin: 0;        }        ul, ol {            padding-left: 32px;            padding-left: 2.13rem;        }        blockquote {            border-left: 4px solid #dddddd;            padding: 0 12px;            padding: 0 0.8rem;            color: #aaa;        }        blockquote > :first-child {            margin-top: 0;        }        blockquote > :last-child {            margin-bottom: 0;        }        img {            border: 0;            max-width: 100%;            height: auto !important;        }        table {            border-collapse: collapse;            border: 1px solid #bbbbbb;        }        td {            border-collapse: collapse;            border: 1px solid #bbbbbb;        }        @media screen and (max-width: 660px) {            body {                margin: 20px 18px;                margin: 1.33rem 1.2rem;            }        }        @media only screen and (-webkit-max-device-width: 1024px), only screen and (-o-max-device-width: 1024px), only screen and (max-device-width: 1024px), only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3), only screen and (min-device-pixel-ratio: 3) {            html, body {                font-size: 17px;            }            body {                line-height: 1.7;                margin: 0.75rem 0.9375rem;                color: #353c47;            }            h1 {                font-size: 2.125rem;            }            h2 {                font-size: 1.875rem;            }            h3 {                font-size: 1.625rem;            }            h4 {                font-size: 1.375rem;            }            h5 {                font-size: 1.125rem;            }            h6 {                color: inherit;            }            ul, ol {                padding-left: 2.5rem;            }            blockquote {                border-left: 4px solid #c8d4e8;                padding: 0 0.9375rem;                color: #b3c2dd;            }        }</style></head>
+
+<body style=""><div><span style="background-color: rgb(255, 255, 255);">参考网址：<a href="https://wiki.opendaylight.org/view/Main_Page" target="_blank" rel="external">https://wiki.opendaylight.org/view/Main_Page</a></span></div><h1>直接下载编译后程序</h1><div><span style="background-color: rgb(255, 153, 204);">li版本的opendaylight控制器的端口为6653，不是6633.</span></div><div><span style="line-height: 1.6;"><br></span></div><div><span style="line-height: 1.6;">1、从<a href="https://www.opendaylight.org/downloads" target="_blank" rel="external">https://www.opendaylight.org/downloads</a></span><span style="line-height: 1.6;">下载</span><a href="https://www.opendaylight.org/software/downloads/lithium-sr3" style="line-height: 1.6; margin: 0px; padding: 0px; box-sizing: border-box; widows: 1;" target="_blank" rel="external"><font color="#ff0000">Lithium-SR3</font></a><span style="line-height: 1.6;">版本软件和</span><a href="http://go.linuxfoundation.org/l/6342/2015-06-28/2l76qt/6342/128122/bk_getting_started_guide_20150629.pdf" style="background-color: rgb(255, 255, 255); font-family: Roboto, 'Helvetica Neue', helvetica, Arial, sans-serif; font-size: 14px; letter-spacing: 0.48px; line-height: 1.6; widows: 1; margin: 0px; padding: 0px; box-sizing: border-box; color: rgb(241, 89, 34); text-decoration: none;" target="_blank" rel="external">Getting Started Guide</a><span style="line-height: 1.6;">文件。</span></div><div><span style="line-height: 1.6;">2、上传到10.20.31.207服务器/home/ubuntu/downloads目录</span></div><div><span style="line-height: 1.6;">3、按照下载的说明文件，解压运行karaf。</span></div><div><span style="line-height: 1.6;"><br></span></div><div><b>安装odl-l2switch-switch-ui插件</b></div><div><div><pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code class="language-c"><span class="pln">cd&nbsp;</span><span class="pun">/</span><span class="pln">home</span><span class="pun">/</span><span class="pln">ubuntu</span><span class="pun">/</span><span class="pln">downloads</span><span class="pun">/</span><span class="pln">distribution</span><span class="pun">-</span><span class="pln">karaf</span><span class="pun">-</span><span class="lit">0.3</span><span class="pun">.</span><span class="lit">3</span><span class="pun">-</span><span class="typ">Lithium</span><span class="pun">-</span><span class="pln">SR3</span></code></li><li class="L0"><font color="#48484c">ubuntu@odl207:~/downloads/distribution-karaf-0.3.3-Lithium-SR3$./bin/karaf</font></li><li class="L1"><code class="language-c"><span class="pln">opendaylight-user@root&gt;feature</span><span class="pun">:</span><span class="pln">install&nbsp;odl</span><span class="pun">-</span><span class="pln">l2switch</span><span class="pun">-</span><span class="pln">switch-ui</span></code></li></ol></pre></div><div>安装过程中出现错误，错误信息没能记下来，意思是要求java版本1.7以上，而服务器上版本为1.6。</div></div><div>退出karaf，安装java1.7</div><div><pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code class="language-c"><span class="pln">opendaylight-user@root&gt;logout</span></code></li><li class="L1"><code class="language-c"><span class="pln">ubuntu@odl207:~/downloads/distribution-karaf-0.3.3-Lithium-SR3$sudo apt</span><span class="pun">-</span><span class="pln">get install openjdk</span><span class="pun">-</span><span class="lit">7</span><span class="pun">-</span><span class="pln">jdk</span></code></li></ol></pre></div><div><span style="line-height: 1.6;">安装完成后，其实还是使用的旧版本java，需要</span><span style="line-height: 1.6; widows: 1;">在/home/ubuntu/.bashrc中</span><span style="line-height: 1.6;">修改JAVA_HOME值，</span><span style="line-height: 1.6;">然后关闭终端，重新登录，发现java版本已经是新版本了。</span><br></div><div>再次进入karaf，安装<span class="pln" style="font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13px; line-height: 18px; white-space: pre; background-color: rgb(247, 247, 249);">odl</span><span class="pun" style="font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13px; line-height: 18px; white-space: pre; background-color: rgb(247, 247, 249);">-</span><span class="pln" style="font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13px; line-height: 18px; white-space: pre; background-color: rgb(247, 247, 249);">l2switch</span><span class="pun" style="font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13px; line-height: 18px; white-space: pre; background-color: rgb(247, 247, 249);">-</span><span class="pln" style="font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13px; line-height: 18px; white-space: pre; background-color: rgb(247, 247, 249);">switch-ui</span><span style="line-height: 1.6;">插件成功。</span></div><div><br></div><div><b>安装the DLUX web interface</b></div><div>根据说明文档中网址：<a href="https://wiki.opendaylight.org/view/OpenDaylight_DLUX:DLUX_Karaf_Feature" target="_blank" rel="external">https://wiki.opendaylight.org/view/OpenDaylight_DLUX:DLUX_Karaf_Feature</a>安装</div><div><div><pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code class="language-c"><span class="pln">opendaylight-user@root&gt;feature</span><span class="pun">:</span><span class="pln">install odl</span><span class="pun">-</span><span class="pln">restconf odl</span><span class="pun">-</span><span class="pln">l2switch</span><span class="pun">-</span><span class="kwd">switch</span><span class="pln"> odl</span><span class="pun">-</span><span class="pln">mdsal</span><span class="pun">-</span><span class="pln">apidocs odl</span><span class="pun">-</span><span class="pln">dlux</span><span class="pun">-</span><span class="pln">core</span></code></li></ol></pre></div><div><span style="color: rgb(37, 37, 37); font-family: sans-serif; font-size: 14px; line-height: 22.4px; widows: 1; background-color: rgb(255, 255, 255);">用浏览器可以打开</span><span style="widows: 1;">&nbsp;</span><a rel="external" class="external free" href="http://localhost:8181/index.html" style="padding-right: 13px; widows: 1;" target="_blank">http://10.20.31.207:8181/index.html</a>网址，<span style="background-color: rgb(255, 153, 204);">能看到与控制器连接的of交换器流表已知的拓扑结构</span>。</div></div><div><br></div><div><span style="font-size: 1.4rem; font-weight: bold; line-height: 1.6;">源码编译安装</span><br></div><div>参考网址1：<a href="https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup" target="_blank" rel="external">https://wiki.opendaylight.org/view/GettingStarted:Development_Environment_Setup</a> </div><div>参考网址2：<span style="line-height: 1.6;"><a href="https://wiki.opendaylight.org/view/GettingStarted:Pulling,_Hacking,_and_Pushing_All_the_Code_from_the_CLI" target="_blank" rel="external">https://wiki.opendaylight.org/view/GettingStarted:Pulling,_Hacking,_and_Pushing_All_the_Code_from_the_CLI</a> </span></div><div>编译时出现错误：</div><div><div><pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="pun">---</span><span class="pln"> karaf</span><span class="pun">-</span><span class="pln">plugin</span><span class="pun">:</span><span class="lit">1.7</span><span class="pun">.</span><span class="lit">0</span><span class="pun">-</span><span class="pln">SNAPSHOT</span><span class="pun">:</span><span class="pln">populate</span><span class="pun">-</span><span class="kwd">local</span><span class="pun">-</span><span class="pln">repo </span><span class="pun">(</span><span class="pln">populate</span><span class="pun">-</span><span class="kwd">local</span><span class="pun">-</span><span class="pln">repo</span><span class="pun">)</span><span class="pln"> </span><span class="pun">@</span><span class="pln"> distribution</span><span class="pun">-</span><span class="pln">karaf </span><span class="pun">---</span></code></li><li class="L1"><code class="language-sh"><span class="pun">[</span><span class="pln">WARNING</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Error</span><span class="pln"> injecting</span><span class="pun">:</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">opendaylight</span><span class="pun">.</span><span class="pln">odlparent</span><span class="pun">.</span><span class="typ">PopulateLocalRepoMojo</span></code></li><li class="L2"><code class="language-sh"><span class="pln">java</span><span class="pun">.</span><span class="pln">lang</span><span class="pun">.</span><span class="typ">TypeNotPresentException</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Type</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">opendaylight</span><span class="pun">.</span><span class="pln">odlparent</span><span class="pun">.</span><span class="typ">PopulateLocalRepoMojo</span><span class="pln"> not present</span></code></li><li class="L3"><code class="language-sh"><span class="pln">	at org</span><span class="pun">.</span><span class="pln">eclipse</span><span class="pun">.</span><span class="pln">sisu</span><span class="pun">.</span><span class="pln">space</span><span class="pun">.</span><span class="typ">URLClassSpace</span><span class="pun">.</span><span class="pln">loadClass</span><span class="pun">(</span><span class="typ">URLClassSpace</span><span class="pun">.</span><span class="pln">java</span><span class="pun">:</span><span class="lit">147</span><span class="pun">)</span></code></li></ol></pre></div><div><div><pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="pun">------------------------------------------------------------------------</span></code></li><li class="L1"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Reactor</span><span class="pln"> </span><span class="typ">Summary</span><span class="pun">:</span></code></li><li class="L2"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L3"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> integration </span><span class="pun">........................................</span><span class="pln"> SUCCESS </span><span class="pun">[</span><span class="pln"> </span><span class="lit">22.759</span><span class="pln"> s</span><span class="pun">]</span></code></li><li class="L4"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> features</span><span class="pun">-</span><span class="pln">integration</span><span class="pun">-</span><span class="pln">index </span><span class="pun">.........................</span><span class="pln"> SUCCESS </span><span class="pun">[</span><span class="lit">01</span><span class="pun">:</span><span class="lit">03</span><span class="pln"> min</span><span class="pun">]</span></code></li><li class="L5"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> features</span><span class="pun">-</span><span class="pln">integration</span><span class="pun">-</span><span class="pln">test </span><span class="pun">..........................</span><span class="pln"> SUCCESS </span><span class="pun">[</span><span class="pln">  </span><span class="lit">9.372</span><span class="pln"> s</span><span class="pun">]</span></code></li><li class="L6"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> distribution</span><span class="pun">-</span><span class="pln">karaf </span><span class="pun">.................................</span><span class="pln"> FAILURE </span><span class="pun">[</span><span class="pln"> </span><span class="lit">29.403</span><span class="pln"> s</span><span class="pun">]</span></code></li><li class="L7"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="pun">------------------------------------------------------------------------</span></code></li><li class="L8"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> BUILD FAILURE</span></code></li><li class="L9"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="pun">------------------------------------------------------------------------</span></code></li><li class="L0"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Total</span><span class="pln"> time</span><span class="pun">:</span><span class="pln"> </span><span class="lit">02</span><span class="pun">:</span><span class="lit">20</span><span class="pln"> min</span></code></li><li class="L1"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Finished</span><span class="pln"> at</span><span class="pun">:</span><span class="pln"> </span><span class="lit">2016</span><span class="pun">-</span><span class="lit">03</span><span class="pun">-</span><span class="lit">15T18</span><span class="pun">:</span><span class="lit">50</span><span class="pun">:</span><span class="lit">40</span><span class="pun">+</span><span class="lit">08</span><span class="pun">:</span><span class="lit">00</span></code></li><li class="L2"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Final</span><span class="pln"> </span><span class="typ">Memory</span><span class="pun">:</span><span class="pln"> </span><span class="lit">160M</span><span class="pun">/</span><span class="lit">382M</span></code></li><li class="L3"><code class="language-sh"><span class="pun">[</span><span class="pln">INFO</span><span class="pun">]</span><span class="pln"> </span><span class="pun">------------------------------------------------------------------------</span></code></li><li class="L4"><code class="language-sh"><span class="pun">[</span><span class="pln">ERROR</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Failed</span><span class="pln"> to execute goal org</span><span class="pun">.</span><span class="pln">opendaylight</span><span class="pun">.</span><span class="pln">odlparent</span><span class="pun">:</span><span class="pln">karaf</span><span class="pun">-</span><span class="pln">plugin</span><span class="pun">:</span><span class="lit">1.7</span><span class="pun">.</span><span class="lit">0</span><span class="pun">-</span><span class="pln">SNAPSHOT</span><span class="pun">:</span><span class="pln">populate</span><span class="pun">-</span><span class="kwd">local</span><span class="pun">-</span><span class="pln">repo </span><span class="pun">(</span><span class="pln">populate</span><span class="pun">-</span><span class="kwd">local</span><span class="pun">-</span><span class="pln">repo</span><span class="pun">)</span><span class="pln"> on project distribution</span><span class="pun">-</span><span class="pln">karaf</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Execution</span><span class="pln"> populate</span><span class="pun">-</span><span class="kwd">local</span><span class="pun">-</span><span class="pln">repo of goal org</span><span class="pun">.</span><span class="pln">opendaylight</span><span class="pun">.</span><span class="pln">odlparent</span><span class="pun">:</span><span class="pln">karaf</span><span class="pun">-</span><span class="pln">plugin</span><span class="pun">:</span><span class="lit">1.7</span><span class="pun">.</span><span class="lit">0</span><span class="pun">-</span><span class="pln">SNAPSHOT</span><span class="pun">:</span><span class="pln">populate</span><span class="pun">-</span><span class="kwd">local</span><span class="pun">-</span><span class="pln">repo failed</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Unable</span><span class="pln"> to load the mojo </span><span class="str">'populate-local-repo'</span><span class="pln"> </span><span class="kwd">in</span><span class="pln"> the plugin </span><span class="str">'org.opendaylight.odlparent:karaf-plugin:1.7.0-SNAPSHOT'</span><span class="pln"> due to an API incompatibility</span><span class="pun">:</span><span class="pln"> org</span><span class="pun">.</span><span class="pln">codehaus</span><span class="pun">.</span><span class="pln">plexus</span><span class="pun">.</span><span class="pln">component</span><span class="pun">.</span><span class="pln">repository</span><span class="pun">.</span><span class="pln">exception</span><span class="pun">.</span><span class="typ">ComponentLookupException</span><span class="pun">:</span><span class="pln"> org</span><span class="pun">/</span><span class="pln">opendaylight</span><span class="pun">/</span><span class="pln">odlparent</span><span class="pun">/</span><span class="typ">PopulateLocalRepoMojo</span><span class="pln"> </span><span class="pun">:</span><span class="pln"> </span><span class="typ">Unsupported</span><span class="pln"> major</span><span class="pun">.</span><span class="pln">minor version </span><span class="lit">52.0</span></code></li></ol></pre></div><div><br></div><div>编译好的的karaf路径：~/<span style="font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13px; color: rgb(51, 51, 51); line-height: 20px; white-space: pre-wrap; widows: 1; background-color: rgb(255, 255, 255);">distributions/karaf/target/assembly/bin/karaf</span></div></div></div><div><br></div><div><span style="font-size: 8pt;"><span style="font-size: 8pt;"><span style="font-size: 8pt;"><span style="font-size: 8pt;"><span style="font-size: 8pt;"><span style="font-size: 8pt;"></span></span></span></span></span></span></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div></body></html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://xuguan.github.io/2016/05/29/opendaylight安装与配置/" data-id="cios6q6bg0002f4ux1ea9cwz0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/29/routing模块之routing.dijkstra_implementation/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/05/29/list for ODL develop/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/notCode/">notCode</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/notCode/intro/">intro</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/notCode/">notCode</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/notCode/" style="font-size: 10px;">notCode</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/29/ADSAL与MDSAL区别/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/29/odl全局实例.md/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/29/routing模块之routing.dijkstra_implementation/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/29/opendaylight安装与配置/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/29/list for ODL develop/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Guan<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
