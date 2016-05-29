@@ -252,6 +252,30 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h1 id="How-to-build-this-project"><a href="#How-to-build-this-project" class="headerlink" title="How to build this project?"></a><a href="http://blog.csdn.net/jzooo/article/details/46781805" target="_blank" rel="external">How to build this project?</a></h1><ol>
+<li>$ npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></li>
+<li>$ cnpm install -g hexo-cli</li>
+<li>$ cnpm install hexo –save</li>
+<li><p>$ hexo -v</p>
+</li>
+<li><p>$ hexo init</p>
+</li>
+<li><p>$ cnpm install</p>
+</li>
+<li><p>$ hexo s -g</p>
+</li>
+<li><p>打开浏览器，输入localhost:4000,就可以在本地看到你的个人博客了 </p>
+</li>
+</ol>
+<h2 id="上传到github"><a href="#上传到github" class="headerlink" title="上传到github"></a>上传到github</h2><ol>
+<li><p>$ hexo new “hello”</p>
+</li>
+<li><p>设置git身份, 推荐用git shell<br>$ git config –global user.name “你的用户名”<br>$ git config –global user.email “你的邮箱”</p>
+</li>
+<li><p>$ cnpm install hexo-deployer-git –save</p>
+</li>
+<li>$ hexo d -g</li>
+</ol>
 
       
     </div>
