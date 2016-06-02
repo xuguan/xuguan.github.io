@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://xuguan.github.io/2016/06/02/monitorHTTP/index.html">
 <meta property="og:site_name" content="xuguan">
 <meta property="og:description" content="A simle way to find your most recent online http servicesAfter the tcpdump captures the HTTP traffic, we can find the most recent or frequently accessing web services. Although some HTTP sessions have">
-<meta property="og:updated_time" content="2016-06-02T09:56:42.884Z">
+<meta property="og:updated_time" content="2016-06-02T10:03:06.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="monitorHTTP">
 <meta name="twitter:description" content="A simle way to find your most recent online http servicesAfter the tcpdump captures the HTTP traffic, we can find the most recent or frequently accessing web services. Although some HTTP sessions have">
@@ -97,7 +97,7 @@
 <h2 id="tcpdump-http-sessions"><a href="#tcpdump-http-sessions" class="headerlink" title="tcpdump http sessions"></a>tcpdump http sessions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tcpdump tcp -i eth3 -t <span class="_">-s</span> 0 -c 100000000 and dst port ! 22 and src net 10.20.31.0/24 and tcp[20:2]=0x4745 or tcp[20:2]=0x4854 -w /tmp/tcpdumpSave.cap</span><br></pre></td></tr></table></figure>
 <h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="_">-a</span> /tmp/tcpdumpSave.cap |awk <span class="string">'&#123;print $2&#125;'</span> &gt; tcpdumpGrepHost.txt</span><br></pre></td></tr></table></figure>
 <p>where <code>-a</code> means to ‘Process a binary file as if it were text’.</p>
-<h2 id="google-wordcount-py"><a href="#google-wordcount-py" class="headerlink" title="google-wordcount.py"></a>google-wordcount.py</h2><p>I exploit the wordcount written by <a href="https://github.com/aysin/wordCount/blob/master/.py" target="_blank" rel="external">aysin</a>, which only work for <code>--count</code> here.</p>
+<h2 id="google-wordcount-py"><a href="#google-wordcount-py" class="headerlink" title="google-wordcount.py"></a>google-wordcount.py</h2><p>I exploit the wordcount written by <a href="https://github.com/aysin/wordCount/blob/master/.py" target="_blank" rel="external">aysin</a>, which only work with the option <code>--count</code> here.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./google-wordcount.py --count tcpdumpGrepHost.txt |sort -n -k 2 -r &gt;tcpdumpCount.txt</span><br></pre></td></tr></table></figure>
       
     </div>
