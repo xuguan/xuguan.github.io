@@ -68,6 +68,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-monitorHTTP" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/02/monitorHTTP/" class="article-date">
+  <time datetime="2016-06-02T09:31:28.000Z" itemprop="datePublished">2016-06-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Code/">Code</a>►<a class="article-category-link" href="/categories/Code/script/">script</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/02/monitorHTTP/">monitorHTTP</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="A-simle-way-to-find-your-most-recent-online-http-services"><a href="#A-simle-way-to-find-your-most-recent-online-http-services" class="headerlink" title="A simle way to find your most recent online http services"></a>A simle way to find your most recent online http services</h1><p>After the <code>tcpdump</code> captures the HTTP traffic, we can find the most recent or frequently accessing web services. Although some HTTP sessions have no Host field, we calcuate and export the frequence of each Host for simplicity.</p>
+<h2 id="tcpdump-http-sessions"><a href="#tcpdump-http-sessions" class="headerlink" title="tcpdump http sessions"></a>tcpdump http sessions</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tcpdump tcp -i eth3 -t <span class="_">-s</span> 0 -c 100000000 and dst port ! 22 and src net 10.20.31.0/24 and tcp[20:2]=0x4745 or tcp[20:2]=0x4854 -w /tmp/tcpdumpSave.cap</span><br></pre></td></tr></table></figure>
+<h2 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="_">-a</span> /tmp/tcpdumpSave.cap |awk <span class="string">'&#123;print $2&#125;'</span> &gt; tcpdumpGrepHost.txt</span><br></pre></td></tr></table></figure>
+<p>where <code>-a</code> means to ‘Process a binary file as if it were text’.</p>
+<h2 id="google-wordcount-py"><a href="#google-wordcount-py" class="headerlink" title="google-wordcount.py"></a>google-wordcount.py</h2><p>I exploit the wordcount written by <a href="https://github.com/aysin/wordCount/blob/master/.py" target="_blank" rel="external">aysin</a>, which only work for <code>--count</code> here.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./google-wordcount.py --count tcpdumpGrepHost.txt |sort -n -k 2 -r &gt;tcpdumpCount.txt</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://xuguan.github.io/2016/06/02/monitorHTTP/" data-id="cioy4teai0004c8uxajc2ukq2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/awk/">awk</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/grep/">grep</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tcpdump/">tcpdump</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-odl全局实例" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/05/29/odl全局实例/" class="article-date">
@@ -163,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xuguan.github.io/2016/05/29/odl全局实例/" data-id="cios6vx7h000428uxnoshn5gw" class="article-share-link">Share</a>
+      <a data-url="http://xuguan.github.io/2016/05/29/odl全局实例/" data-id="cioy4tebb000nc8ux1wzhyi48" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javaCode/">javaCode</a></li></ul>
@@ -209,7 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xuguan.github.io/2016/05/29/The-First-Day/" data-id="cios6vx6l000028uxnc1jyrh7" class="article-share-link">Share</a>
+      <a data-url="http://xuguan.github.io/2016/05/29/The-First-Day/" data-id="cioy4te9q0000c8uxy6icuuyf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/notCode/">notCode</a></li></ul>
@@ -281,7 +328,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://xuguan.github.io/2016/05/29/hello-world/" data-id="cios6vx6z000128ux9u1fi1t9" class="article-share-link">Share</a>
+      <a data-url="http://xuguan.github.io/2016/05/29/hello-world/" data-id="cioy4tea10001c8uxtaiqu9mq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -300,7 +347,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Code/howToUse/">howToUse</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/notCode/">notCode</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/notCode/intro/">intro</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Code/howToUse/">howToUse</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/script/">script</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/notCode/">notCode</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/notCode/intro/">intro</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -310,7 +357,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaCode/">javaCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notCode/">notCode</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/awk/">awk</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bash/">bash</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/grep/">grep</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaCode/">javaCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notCode/">notCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tcpdump/">tcpdump</a></li></ul>
     </div>
   </div>
 
@@ -320,7 +367,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/javaCode/" style="font-size: 10px;">javaCode</a> <a href="/tags/notCode/" style="font-size: 10px;">notCode</a>
+      <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/awk/" style="font-size: 10px;">awk</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/grep/" style="font-size: 10px;">grep</a> <a href="/tags/javaCode/" style="font-size: 10px;">javaCode</a> <a href="/tags/notCode/" style="font-size: 10px;">notCode</a> <a href="/tags/tcpdump/" style="font-size: 10px;">tcpdump</a>
     </div>
   </div>
 
@@ -329,7 +376,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li></ul>
     </div>
   </div>
 
@@ -340,6 +387,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/06/02/monitorHTTP/">monitorHTTP</a>
+          </li>
         
           <li>
             <a href="/2016/05/29/odl全局实例/">odl全局实例</a>
